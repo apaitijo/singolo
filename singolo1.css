@@ -1,0 +1,276 @@
+@import "./reset.css";
+
+/*abstract*/
+
+/*base*/
+html {
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 1.2rem;
+    font-family: 'Lato', sans-serif;
+}
+
+h1 {
+    color: #ffffff;
+    display: inline-block;
+}
+
+h2 {
+    font-size: 30px;
+    color: #666d89;
+    font-weight: 900;
+    text-transform: capitalize;
+}
+
+h3 {
+    font-size: 18px;
+    color: #666d89;
+    font-weight: 900;
+    text-transform: capitalize;
+}
+
+.icon {
+    width: 61px;
+    height: 61px;
+}
+
+/*layouts*/
+.wrapper {
+    max-width: 1020px;
+    margin: auto;
+}
+
+.header {
+    height: 89px;
+    line-height: 89px;
+    background-color: #2d303a;
+    position: relative;
+}
+
+.header::after {
+    content: "";
+    height: 6px;
+    width: 100%;
+    background-color: #323746;
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+}
+
+.header__wrapper {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.layout-3-column {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/*components*/
+/*header*/
+.logo {
+    font-size: 2.5rem;
+    color: #f06c64;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.navigation {
+    display: flex;
+    text-transform: uppercase;
+}
+
+.navigation__item {
+    position: relative;
+    padding-left: 28px;
+}
+
+.navigation__item:not(:last-child):after {
+    content: '';
+    height: 2px;
+    width: 2px;
+    background-color: #494e62;
+    right: -16px;
+    bottom: 43px;
+    display: inline-block;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.navigation__link {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.navigation__link:hover {
+    color: #f06c64;
+}
+
+/*slider*/
+.slider {
+    background-color: #f06c64;
+}
+
+.slider__wrapper {
+    padding: 59px 40px 62px 42px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.slider__navigation {
+    display: flex;
+}
+
+.slider__navigation-icon {
+    display: block;
+    margin: auto;
+}
+
+.slider__navigation:hover,
+.slider__navigation:active {
+    box-shadow: 0 0 2px 10px rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.slider__navigation:hover img,
+.slider__navigation:active img {
+    filter: brightness(50%);
+}
+
+.slider__navigation-icon_right {
+    transform: rotate(180deg);
+}
+
+.slider__content {
+    display: flex;
+    padding: 0 54px;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.phone {
+    position: relative;
+}
+
+.phone__base {
+    position: absolute;
+    left: -2px;
+    top: -1px;
+}
+
+.phone__shadow {
+    position: relative;
+}
+
+.phone__content {
+    width: 188px;
+    height: 333px;
+    position: absolute;
+    top: 65px;
+    left: 14px;
+    overflow: hidden;
+}
+
+.phone__content::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(assets/img/content-vert.png);
+}
+
+.phone_horizontal {
+    transform: rotate(90deg);
+    left: -149px;
+    top: -2px;
+}
+
+.phone_horizontal .phone__content::before {
+    left: -50%;
+    width: 200%;
+    background-image: url(assets/img/content-hor.png);
+    transform: rotate(-90deg);
+}
+
+.phone_horizontal .phone__shadow {
+    transform: rotateX(180deg);
+    top: -24px;
+}
+
+/*Services*/
+.services {
+    background-color: #f2f2f2;
+}
+
+.services__wrapper {
+    padding: 62px 39px;
+    box-sizing: border-box;
+}
+
+.services__description {
+    padding: 21px 0;
+    font-size: 18px;
+    line-height: 30px;
+    color: #767e9e;
+    font-weight: 300;
+}
+
+.services__container {
+    padding: 24px 0;
+}
+
+.service {
+    width: 32%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 19px;
+}
+
+.icon_pencil {
+    background-image: url("assets/img/services/pencil.svg");
+}
+
+.icon_bulb {
+    background-image: url("assets/img/services/bulb.svg");
+}
+
+.icon_heart {
+    background-image: url("assets/img/services/heart.svg");
+}
+
+.icon_phone {
+    background-image: url("assets/img/services/phone.svg");
+}
+
+.icon_star {
+    background-image: url("assets/img/services/star.svg");
+}
+
+.icon_cloud {
+    background-image: url("assets/img/services/cloud.svg");
+}
+
+.service__content {
+    max-width: 220px;
+}
+
+.service__description {
+    font-size: 12px;
+    line-height: 22px;
+    color: #767e9e;
+    font-weight: 400;
+    padding: 10px 0;
+}
