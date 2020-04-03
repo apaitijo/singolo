@@ -48,17 +48,32 @@ h3 {
     height: 89px;
     line-height: 89px;
     background-color: #2d303a;
+}
+
+.section {
     position: relative;
 }
 
-.header::after {
+.section::after {
     content: "";
     height: 6px;
     width: 100%;
-    background-color: #323746;
     position: absolute;
     bottom: -6px;
     left: 0;
+    z-index: 1;
+}
+
+.header.section::after {
+    background-color: #323746;
+}
+
+.slider.section::after {
+    background-color: #ea676b;
+}
+
+.services.section::after {
+    background-color: #ffffff;
 }
 
 .header__wrapper {
@@ -124,7 +139,7 @@ h3 {
 }
 
 .slider__wrapper {
-    padding: 59px 40px 62px 42px;
+    padding: 59px 40px 56px 42px;
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
@@ -216,7 +231,7 @@ h3 {
 }
 
 .services__wrapper {
-    padding: 62px 39px;
+    padding: 68px 39px 6px 39px;
     box-sizing: border-box;
 }
 
@@ -265,6 +280,8 @@ h3 {
 
 .service__content {
     max-width: 220px;
+    max-height: 110px;
+    overflow: hidden;
 }
 
 .service__description {
@@ -273,4 +290,6 @@ h3 {
     color: #767e9e;
     font-weight: 400;
     padding: 10px 0;
+    text-align: justify;
+    word-break: break-word;
 }
